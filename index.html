@@ -1,0 +1,85 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>User Application</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div id="app"></div>
+        <header class="navbar navbar-dark bg-dark header">
+            <a class="navbar-brand" href="#">Тамагочи</a>
+        </header>
+        <main class='container-fluid main'>
+
+            <ul class="indicators">
+                <li>
+                    <i class="fa fa-heartbeat" aria-hidden="true"></i>
+                    ----------- <span id='health' class='indicators-health'>100</span>
+                </li>
+                <li>
+                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                    ----------- <span id='satiety' class='indicators-satiety'>100</span>
+                </li>
+                <li>
+                    <i class="fa fa-smile-o" aria-hidden="true"></i>
+                    ----------- <span id='mood' class='indicators-mood'>100</span>
+                </li>
+                <li>
+                    <i class="fa fa-shower" aria-hidden="true"></i>
+                    ----------- <span id='purity' class='indicators-purity'>100</span>
+                </li>
+                <li>
+                    <i class="fa fa-bolt" aria-hidden="true"></i>
+                    ----------- <span id='energy' class='indicators-energy'>100</span>
+                </li>
+                <li>
+                    <i class="fa fa-gratipay" aria-hidden="true"></i>
+                    ----------- <span id='love' class='indicators-love'>100</span>
+                </li>
+            </ul>
+
+            <div class="tamagochi">
+                
+            </div>
+            
+
+            <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" id='btnhealth' class="btn btn-secondary">
+                    <i class="fa fa-medkit" aria-hidden="true"></i>
+                </button>
+                <button type="button" id='btnsatiety' class="btn btn-secondary">
+                    <i class="fa fa-birthday-cake" aria-hidden="true"></i>
+                </button>
+                <button type="button" id='btnmood' class="btn btn-secondary">
+                    <i class="fa fa-music" aria-hidden="true"></i>
+                </button>
+                <button type="button" id='btnpurity' class="btn btn-secondary">
+                    <i class="fa fa-tint" aria-hidden="true"></i>
+                </button>
+                <button type="button" id='btnenergy' class="btn btn-secondary">
+                    <i class="fa fa-bolt" aria-hidden="true"></i>
+                </button>
+                <button type="button" id='btnlove' class="btn btn-secondary">
+                    <i class="fa fa-gratipay" aria-hidden="true"></i>
+                </button>
+            </div>
+
+        </main>
+
+
+        <div class="modal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modalaction">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </body>
+</html>
