@@ -1,11 +1,17 @@
 class Tamajochi {
-  constructor(){
+  constructor(name){
+    
+    //Tamajochi props
+    this._name = name || 'Linus Torvalds';
     this._health = 100;
     this._satiety = 100;
     this._mood = 100;
     this._purity = 100;
     this._energy = 100;
     this._love = 100;
+  }
+  get name(){
+    return this._name;
   }
 
   get health(){
@@ -56,5 +62,7 @@ class Tamajochi {
     this._love = value;
   }
 }
+
+// return Tamajochi class
 
 export default Tamajochi;

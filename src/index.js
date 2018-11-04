@@ -1,23 +1,36 @@
-import Tamajochi from "./js/Tamajochi";
-import { handleAction, subtractValue } from "./js/controller";
+//import styles
 import './scss/main.scss';
 
-const tamajochi = new Tamajochi();
-const healthDOM = document.getElementById('health'),
-      satietyDOM = document.getElementById('satiety'),
-      moodDOM = document.getElementById('mood'),
-      purityDOM = document.getElementById('purity'),
-      energyDOM = document.getElementById('energy'),
-      loveDOM = document.getElementById('love'),
-      tamajochiDOM = document.querySelector('.tamagochi');
+// import dependencies
+import Tamajochi from "./js/Tamajochi";
+import { handleAction, subtractValue } from "./js/controller";
 
-const btnhealth = document.getElementById('btnhealth'),
-      btnsatiety = document.getElementById('btnsatiety'),
-      btnmood = document.getElementById('btnmood'),
-      btnpurity = document.getElementById('btnpurity'),
-      btnenergy = document.getElementById('btnenergy'),
-      btnlove = document.getElementById('btnlove');
 
+//tamajochi
+const name = prompt('Введите имя питомца', 'Linus Torvalds');
+const tamajochi = new Tamajochi(name);
+
+
+
+//DOM elements
+document.getElementById('name').innerText = tamajochi.name;
+const healthDOM = document.getElementById('health');
+const satietyDOM = document.getElementById('satiety');
+const moodDOM = document.getElementById('mood');
+const purityDOM = document.getElementById('purity');
+const energyDOM = document.getElementById('energy');
+const loveDOM = document.getElementById('love');
+const tamajochiDOM = document.querySelector('.tamagochi');
+
+//Buttons
+const btnhealth = document.getElementById('btnhealth');
+const btnsatiety = document.getElementById('btnsatiety');
+const btnmood = document.getElementById('btnmood');
+const btnpurity = document.getElementById('btnpurity');
+const btnenergy = document.getElementById('btnenergy');
+const btnlove = document.getElementById('btnlove');
+
+//AddListeners
 btnhealth.addEventListener('click', handleHealth);
 btnsatiety.addEventListener('click', handleSatiety);
 btnmood.addEventListener('click', handleMood);
@@ -25,6 +38,7 @@ btnpurity.addEventListener('click', handlePurity);
 btnenergy.addEventListener('click', handleEnergy);
 btnlove.addEventListener('click', handleLove);
 
+//Tamagochi life 
 let live = setInterval(() => {
   let {health, satiety, mood, purity, energy, love} = tamajochi;
   tamajochi.health = subtractValue(health, 1);
@@ -45,6 +59,7 @@ let live = setInterval(() => {
 
 },5000)
 
+//tamagochi died
 function handleDied(){
   clearInterval(live);
   btnhealth.removeEventListener('click', handleHealth);

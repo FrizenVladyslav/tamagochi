@@ -102,8 +102,10 @@ b, strong {
 	opacity: 0.9;
 }
 
-.modalaction{
-	margin-top: 0;
+.btn{
+	p{
+		margin-bottom: 0;
+	}
 }
 
 @import "media"; // Always at the end
